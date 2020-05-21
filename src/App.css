@@ -14,9 +14,6 @@
 }
 
 .App-logo {
-  min-width: 40vmin;
-}
-
-.App-link {
-  color: #61dafb;
+  width: 60vmin;
+  height: auto;
 }
