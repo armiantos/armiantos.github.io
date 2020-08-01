@@ -1,9 +1,9 @@
 import React from 'react';
 import {
     Card,
-    CardActionArea,
     CardMedia,
     CardContent,
+    Grid,
     Typography,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
@@ -52,11 +52,6 @@ const experiences = [
 ];
 
 const useStyles = makeStyles({
-    root: {
-        width: '40vmin',
-        margin: '1%',
-        alignSelf: 'center',
-    },
     img: {
         objectFit: 'contain',
         padding: '0 10%',
@@ -68,7 +63,7 @@ function Experience({ employer, location, title, summary }) {
     const classes = useStyles();
 
     return (
-        <Card className={classes.root}>
+        <Card>
             <CardMedia
                 component="img"
                 alt={`${employer.name}-logo`}
@@ -94,17 +89,24 @@ function Experiences() {
             <Typography variant="h2" component="h2">
                 My work experience
             </Typography>
-            <div className="flex-container">
+            <Grid
+                container
+                spacing={2}
+                direction="row"
+                justify="center"
+                alignItems="center"
+            >
                 {experiences.map((experience) => (
-                    <Experience
-                        key={experience.employer.name}
-                        employer={experience.employer}
-                        location={experience.location}
-                        title={experience.title}
-                        summary={experience.summary}
-                    />
+                    <Grid item xs={3} key={experience.employer.name}>
+                        <Experience
+                            employer={experience.employer}
+                            location={experience.location}
+                            title={experience.title}
+                            summary={experience.summary}
+                        />
+                    </Grid>
                 ))}
-            </div>
+            </Grid>
         </div>
     );
 }
