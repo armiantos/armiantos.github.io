@@ -69,27 +69,21 @@ function Experience({ employer, location, title, summary }) {
 
     return (
         <Card className={classes.root}>
-            <CardActionArea>
-                <CardMedia
-                    component="img"
-                    alt={`${employer.name}-logo`}
-                    image={employer.logo}
-                    height="200"
-                    className={classes.img}
-                ></CardMedia>
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        {employer.name}
-                    </Typography>
-                    <Typography
-                        variant="body2"
-                        color="textSecondary"
-                        component="p"
-                    >
-                        {title}
-                    </Typography>
-                </CardContent>
-            </CardActionArea>
+            <CardMedia
+                component="img"
+                alt={`${employer.name}-logo`}
+                image={employer.logo}
+                height="200"
+                className={classes.img}
+            ></CardMedia>
+            <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                    {employer.name}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                    {title}
+                </Typography>
+            </CardContent>
         </Card>
     );
 }
