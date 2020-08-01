@@ -51,15 +51,14 @@ const experiences = [
     },
 ];
 
-const useStyles = makeStyles({
-    img: {
-        objectFit: 'contain',
-        padding: '0 10%',
-        boxSizing: 'border-box',
-    },
-});
-
 function Experience({ employer, location, title, summary }) {
+    const useStyles = makeStyles({
+        img: {
+            objectFit: 'contain',
+            padding: '0 10%',
+            boxSizing: 'border-box',
+        },
+    });
     const classes = useStyles();
 
     return (
@@ -72,10 +71,10 @@ function Experience({ employer, location, title, summary }) {
                 className={classes.img}
             ></CardMedia>
             <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography gutterBottom variant="h5">
                     {employer.name}
                 </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography variant="subtitle1" color="textSecondary">
                     {title}
                 </Typography>
             </CardContent>
@@ -86,9 +85,7 @@ function Experience({ employer, location, title, summary }) {
 function Experiences() {
     return (
         <div className="experiences">
-            <Typography variant="h2" component="h2">
-                My work experience
-            </Typography>
+            <Typography variant="h3">My work experience</Typography>
             <Grid
                 container
                 spacing={2}
@@ -97,7 +94,7 @@ function Experiences() {
                 alignItems="center"
             >
                 {experiences.map((experience) => (
-                    <Grid item xs={3} key={experience.employer.name}>
+                    <Grid item xs={8} sm={5} md={3} key={experience.employer.name}>
                         <Experience
                             employer={experience.employer}
                             location={experience.location}
