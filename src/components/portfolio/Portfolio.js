@@ -9,13 +9,13 @@ function App() {
         const tl = anime.timeline({});
 
         tl.add({
-            targets: '.App-logo path',
+            targets: '.logo path',
             easing: 'easeInOutSine',
             duration: 5000,
             strokeDashoffset: [anime.setDashoffset, 0],
         }).add(
             {
-                targets: '.App-catchphrase',
+                targets: '.catchphrase',
                 duration: 2000,
                 opacity: [0, 1],
                 easing: 'easeOutQuart',
