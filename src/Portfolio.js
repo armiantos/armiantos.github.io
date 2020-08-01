@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
-import "./App.css";
+import "./Portfolio.css";
 import anime from "animejs";
 
 import Logo from './Logo';
 
 function App() {
   function animate() {
-    var tl = anime.timeline({
+    const tl = anime.timeline({
     });
 
     tl
@@ -30,10 +30,10 @@ function App() {
   });
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <Logo className="App-logo"/>
-        <p className="App-catchphrase">
+    <div className="portfolio">
+      <header className="header">
+        <Logo className="logo"/>
+        <p className="catchphrase">
           I am <em>the</em> software engineer.
         </p>
       </header>
