@@ -1,0 +1,24 @@
+.experiences {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    min-height: 100vh;
+}
+
+.experience {
+    margin: 1% 2%;
+    text-align: left;
+
+    align-self: center;
+    width: 60%;
+}
+
+.employer,
+.location {
+    display: inline;
+}
+
+.location {
+    margin-left: 1%;
+}

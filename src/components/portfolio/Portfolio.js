@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Experiences from '../experiences/Experiences';
 import './Portfolio.css';
 import anime from 'animejs';
 
@@ -37,6 +38,7 @@ function App() {
                     I am <em>the</em> software engineer.
                 </p>
             </header>
+            <Experiences />
         </div>
     );
 }
