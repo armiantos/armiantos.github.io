@@ -60,8 +60,8 @@ const useStyles = makeStyles({
     img: {
         objectFit: 'contain',
         padding: '0 10%',
-        boxSizing: 'border-box'
-    }
+        boxSizing: 'border-box',
+    },
 });
 
 function Experience({ employer, location, title, summary }) {
