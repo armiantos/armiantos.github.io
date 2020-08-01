@@ -1,9 +1,20 @@
 import React from 'react';
+import {
+    Card,
+    CardActionArea,
+    CardMedia,
+    CardContent,
+    Typography,
+} from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import './Experiences.css';
 
 const experiences = [
     {
-        employer: 'Microsoft',
+        employer: {
+            name: 'Microsoft',
+            logo: '/img/logo/microsoft.png',
+        },
         location: 'Vancouver',
         title: 'Software Engineer Intern',
         summary: [
@@ -13,7 +24,10 @@ const experiences = [
         ],
     },
     {
-        employer: 'Nokia',
+        employer: {
+            name: 'Nokia',
+            logo: '/img/logo/nokia.png',
+        },
         location: 'Kanata',
         title: 'Security Developer Intern',
         summary: [
@@ -23,7 +37,10 @@ const experiences = [
         ],
     },
     {
-        employer: 'University of Alberta',
+        employer: {
+            name: 'University of Alberta',
+            logo: '/img/logo/uofa.png',
+        },
         location: 'Edmonton',
         title: 'Research Assistant',
         summary: [
@@ -34,32 +51,66 @@ const experiences = [
     },
 ];
 
+const useStyles = makeStyles({
+    root: {
+        width: '40vmin',
+        margin: '1%',
+        alignSelf: 'center',
+    },
+    img: {
+        objectFit: 'contain',
+        padding: '0 10%',
+        boxSizing: 'border-box'
+    }
+});
+
 function Experience({ employer, location, title, summary }) {
+    const classes = useStyles();
+
     return (
-        <div className="experience">
-            <h1 className="employer">{employer}</h1>
-            <h3 className="location">{location}</h3>
-            <h2 className="title">{title}</h2>
-            {summary.map((el, i) => (
-                <p key={i}>{el}</p>
-            ))}
-        </div>
+        <Card className={classes.root}>
+            <CardActionArea>
+                <CardMedia
+                    component="img"
+                    alt={`${employer.name}-logo`}
+                    image={employer.logo}
+                    height="200"
+                    className={classes.img}
+                ></CardMedia>
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                        {employer.name}
+                    </Typography>
+                    <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                    >
+                        {title}
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
     );
 }
 
 function Experiences() {
     return (
         <div className="experiences">
-            <h1>My work experience</h1>
-            {experiences.map((experience, i) => (
-                <Experience
-                    key={i}
-                    employer={experience.employer}
-                    location={experience.location}
-                    title={experience.title}
-                    summary={experience.summary}
-                />
-            ))}
+            <Typography variant="h2" component="h2">
+                My work experience
+            </Typography>
+            <div className="flex-container">
+                {experiences.map((experience) => (
+                    <Experience
+                        key={experience.employer.name}
+                        employer={experience.employer}
+                        location={experience.location}
+                        title={experience.title}
+                        summary={experience.summary}
+                    />
+                ))}
+            </div>
         </div>
     );
 }
