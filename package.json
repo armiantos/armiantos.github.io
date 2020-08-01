@@ -40,5 +40,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://armiantos.github.io"
+  "homepage": "https://armiantos.github.io",
+  "devDependencies": {
+    "prettier": "^2.0.5"
+  }
 }
