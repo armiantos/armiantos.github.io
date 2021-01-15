@@ -1,7 +1,6 @@
 import React from 'react';
-import { Card, CardMedia, CardContent, Grid, Typography } from '@material-ui/core';
+import { Card, CardMedia, CardContent, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import './Experience.css';
 
 type ExperienceProps = {
     employer: {
@@ -13,14 +12,15 @@ type ExperienceProps = {
     summary: string[];
 };
 
+const useStyles = makeStyles({
+    img: {
+        objectFit: 'contain',
+        padding: '0 10%',
+        boxSizing: 'border-box',
+    },
+});
+
 function Experience({ employer, location, title, summary }: ExperienceProps) {
-    const useStyles = makeStyles({
-        img: {
-            objectFit: 'contain',
-            padding: '0 10%',
-            boxSizing: 'border-box',
-        },
-    });
     const classes = useStyles();
 
     return (
