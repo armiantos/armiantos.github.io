@@ -29,7 +29,7 @@ function Experience({ employer, location, title, summary, duration }: Experience
     const classes = useStyles();
 
     return (
-        <Grid container justify="center">
+        <Grid container justify="center" alignItems="center">
             <Grid item sm={4} md={3} lg={2}>
                 <img className={classes.large} alt={`${employer.name}-logo`} src={employer.logo} />
             </Grid>
