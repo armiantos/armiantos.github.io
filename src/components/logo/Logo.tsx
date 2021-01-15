@@ -1,15 +1,12 @@
 import React from 'react';
 
-function Logo({ className }) {
+type LogoProps = {
+    className: string
+}
+
+function Logo({className}: LogoProps) {
     return (
-        <svg
-            className={className}
-            width="807"
-            height="203"
-            viewBox="0 0 807 203"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg className={className} width="807" height="203" viewBox="0 0 807 203" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M150 191.222V189.56L148.531 190.339C134.5 197.783 118.494 202 101.5 202C45.9954 202 1 157.005 1 101.5C1 45.9954 45.9954 1 101.5 1C157.005 1 202 45.9954 202 101.5C202 101.665 202 101.83 201.999 101.995L201.994 103H202V202H150V191.222ZM101.5 150C128.286 150 150 128.286 150 101.5C150 74.7142 128.286 53 101.5 53C74.7142 53 53 74.7142 53 101.5C53 128.286 74.7142 150 101.5 150Z"
                 stroke="#40DCC0"
@@ -25,11 +22,7 @@ function Logo({ className }) {
                 stroke="#40DCC0"
                 strokeWidth="2"
             />
-            <path
-                d="M756 101H806V202H756V101Z"
-                stroke="#40DCC0"
-                strokeWidth="2"
-            />
+            <path d="M756 101H806V202H756V101Z" stroke="#40DCC0" strokeWidth="2" />
             <path
                 d="M806 31C806 44.8071 794.807 56 781 56C767.193 56 756 44.8071 756 31C756 17.1929 767.193 6 781 6C794.807 6 806 17.1929 806 31Z"
                 stroke="#40DCC0"
