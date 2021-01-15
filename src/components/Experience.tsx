@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, CardMedia, CardContent, Typography } from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
 type ExperienceProps = {
@@ -14,11 +15,12 @@ type ExperienceProps = {
 };
 
 const useStyles = makeStyles({
-    img: {
+    large: {
         objectFit: 'contain',
-        padding: '0 10%',
         boxSizing: 'border-box',
-        height: 200,
+        width: 200,
+        height: '100%',
+        margin: 'auto',
     },
 });
 
@@ -26,17 +28,28 @@ function Experience({ employer, location, title, summary, duration }: Experience
     const classes = useStyles();
 
     return (
-        <Card>
-            <CardMedia component="img" alt={`${employer.name}-logo`} image={employer.logo} className={classes.img}></CardMedia>
-            <CardContent>
-                <Typography gutterBottom variant="h5">
+        <Grid container justify="center">
+            <Grid item xs={2}>
+                <img className={classes.large} alt={`${employer.name}-logo`} src={employer.logo} />
+            </Grid>
+            <Grid item xs={5}>
+                <Typography gutterBottom variant="h5" align="left">
                     {employer.name}
                 </Typography>
-                <Typography variant="subtitle1" color="textSecondary">
+                <Typography variant="subtitle1" color="textSecondary" align="left">
                     {title}
                 </Typography>
-            </CardContent>
-        </Card>
+                <ul>
+                    {summary.map((item) => (
+                        <li>
+                            <Typography variant="body1" align="left">
+                                {item}
+                            </Typography>
+                        </li>
+                    ))}
+                </ul>
+            </Grid>
+        </Grid>
     );
 }
 
