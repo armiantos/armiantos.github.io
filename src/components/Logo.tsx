@@ -1,10 +1,10 @@
 import React from 'react';
 
 type LogoProps = {
-    className: string
-}
+    className: string;
+};
 
-function Logo({className}: LogoProps) {
+function Logo({ className }: LogoProps) {
     return (
         <svg className={className} width="807" height="203" viewBox="0 0 807 203" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path

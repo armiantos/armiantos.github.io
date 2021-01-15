@@ -1,11 +1,15 @@
 import React, { useEffect } from 'react';
-import Experiences from './Experiences';
+import Experience from './Experience';
 import './Portfolio.css';
 import anime from 'animejs';
 
 import Logo from './Logo';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 
-function Portfolo() {
+import experiences from '../data/experiences';
+
+function Portfolio() {
     function animate() {
         const tl = anime.timeline({});
 
@@ -33,14 +37,29 @@ function Portfolo() {
     return (
         <div className="portfolio">
             <header className="header">
-                <Logo className="logo"/>
+                <Logo className="logo" />
                 <p className="catchphrase">
                     I am <em>the</em> software engineer.
                 </p>
             </header>
-            <Experiences />
+
+            <div className="experiences">
+                <Typography variant="h3">My work experience</Typography>
+                <Grid container spacing={2} direction="row" justify="center" alignItems="center">
+                    {experiences.map((experience) => (
+                        <Grid item xs={8} sm={5} md={3} key={experience.employer.name}>
+                            <Experience
+                                employer={experience.employer}
+                                location={experience.location}
+                                title={experience.title}
+                                summary={experience.summary}
+                            />
+                        </Grid>
+                    ))}
+                </Grid>
+            </div>
         </div>
     );
 }
 
-export default Portfolo;
+export default Portfolio;
