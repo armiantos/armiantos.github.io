@@ -77,6 +77,7 @@ function Portfolio() {
                                 location={experience.location}
                                 title={experience.title}
                                 summary={experience.summary}
+                                duration={experience.duration}
                             />
                         </Grid>
                     ))}

@@ -7,6 +7,7 @@ type ExperienceProps = {
         name: string;
         logo?: string;
     };
+    duration: Date[];
     location: string;
     title: string;
     summary: string[];
@@ -17,15 +18,16 @@ const useStyles = makeStyles({
         objectFit: 'contain',
         padding: '0 10%',
         boxSizing: 'border-box',
+        height: 200,
     },
 });
 
-function Experience({ employer, location, title, summary }: ExperienceProps) {
+function Experience({ employer, location, title, summary, duration }: ExperienceProps) {
     const classes = useStyles();
 
     return (
         <Card>
-            <CardMedia component="img" alt={`${employer.name}-logo`} image={employer.logo} height="200" className={classes.img}></CardMedia>
+            <CardMedia component="img" alt={`${employer.name}-logo`} image={employer.logo} className={classes.img}></CardMedia>
             <CardContent>
                 <Typography gutterBottom variant="h5">
                     {employer.name}

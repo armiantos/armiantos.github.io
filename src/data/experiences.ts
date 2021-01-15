@@ -4,6 +4,7 @@ const experiences = [
             name: 'Microsoft',
             logo: '/img/logo/microsoft.png',
         },
+        duration: [new Date(2020, 5), new Date(2020, 8)],
         location: 'Vancouver',
         title: 'Software Engineer Intern',
         summary: [
@@ -17,6 +18,7 @@ const experiences = [
             name: 'Nokia',
             logo: '/img/logo/nokia.png',
         },
+        duration: [new Date(2020, 1), new Date(2020, 4)],
         location: 'Kanata',
         title: 'Security Developer Intern',
         summary: [
@@ -30,6 +32,7 @@ const experiences = [
             name: 'University of Alberta',
             logo: '/img/logo/uofa.png',
         },
+        duration: [new Date(2019, 5), new Date(2020, 8)],
         location: 'Edmonton',
         title: 'Research Assistant',
         summary: [
