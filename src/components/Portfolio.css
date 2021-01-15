@@ -36,3 +36,7 @@
     width: 60vmin;
     height: auto;
 }
+
+.experiences {
+    overflow-x: hidden;
+}

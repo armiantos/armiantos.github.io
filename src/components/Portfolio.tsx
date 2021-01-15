@@ -40,8 +40,8 @@ const useStyles = makeStyles((theme) => ({
         margin: `${theme.spacing(4)}px 0`,
     },
     subtitle: {
-        margin: `${theme.spacing(4)}px 0`
-    }
+        margin: `${theme.spacing(4)}px 0`,
+    },
 }));
 
 function Portfolio() {
@@ -75,7 +75,7 @@ function Portfolio() {
                 <Typography variant="h3" gutterBottom>
                     My work experience
                 </Typography>
-                <Grid container direction="row" justify="center" alignItems="center" className={classes.list}>
+                <Grid container direction="row" justify="center" alignItems="center" className={classes.list} spacing={6}>
                     {experiences.map((experience) => (
                         <Grid item xs={12} key={experience.employer.name}>
                             <Experience
