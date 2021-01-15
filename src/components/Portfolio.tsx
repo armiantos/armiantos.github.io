@@ -5,7 +5,7 @@ import anime from 'animejs';
 
 import Logo from './Logo';
 
-function App() {
+function Portfolo() {
     function animate() {
         const tl = anime.timeline({});
 
@@ -43,4 +43,4 @@ function App() {
     );
 }
 
-export default App;
+export default Portfolo;
