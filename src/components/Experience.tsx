@@ -18,8 +18,9 @@ const useStyles = makeStyles({
     large: {
         objectFit: 'contain',
         boxSizing: 'border-box',
-        width: 200,
+        width: '100%',
         height: '100%',
+        padding: '5%',
         margin: 'auto',
     },
 });
@@ -29,10 +30,10 @@ function Experience({ employer, location, title, summary, duration }: Experience
 
     return (
         <Grid container justify="center">
-            <Grid item xs={2}>
+            <Grid item sm={4} md={3} lg={2}>
                 <img className={classes.large} alt={`${employer.name}-logo`} src={employer.logo} />
             </Grid>
-            <Grid item xs={5}>
+            <Grid item sm={7} md={6} lg={5}>
                 <Typography gutterBottom variant="h5" align="left">
                     {employer.name}
                 </Typography>
