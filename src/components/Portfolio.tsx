@@ -34,10 +34,13 @@ const useStyles = makeStyles((theme) => ({
     large: {
         width: theme.spacing(32),
         height: theme.spacing(32),
-        margin: `${theme.spacing(2)}px 0 ${theme.spacing(2)}px 0`
+        margin: `${theme.spacing(2)}px 0 ${theme.spacing(2)}px 0`,
     },
     list: {
-        padding: `${theme.spacing(4)}px 0`,
+        margin: `${theme.spacing(4)}px 0`,
+    },
+    subtitle: {
+        margin: `${theme.spacing(4)}px 0`
     }
 }));
 
@@ -52,9 +55,9 @@ function Portfolio() {
         <div className="portfolio">
             <header className="header">
                 <Logo className="logo" />
-                <p className="catchphrase">
+                <Typography variant="h5" className={`catchphrase ${classes.subtitle}`}>
                     I am <em>the</em> software engineer.
-                </p>
+                </Typography>
             </header>
 
             <div className="container about short">
