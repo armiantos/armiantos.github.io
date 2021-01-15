@@ -72,7 +72,7 @@ function Portfolio() {
                 <Typography variant="h3" gutterBottom>
                     My work experience
                 </Typography>
-                <Grid container spacing={2} direction="row" justify="center" alignItems="center" className={classes.list}>
+                <Grid container direction="row" justify="center" alignItems="center" className={classes.list}>
                     {experiences.map((experience) => (
                         <Grid item xs={12} key={experience.employer.name}>
                             <Experience
