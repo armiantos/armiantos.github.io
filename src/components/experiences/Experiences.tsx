@@ -3,7 +3,17 @@ import { Card, CardMedia, CardContent, Grid, Typography } from '@material-ui/cor
 import { makeStyles } from '@material-ui/core/styles';
 import './Experiences.css';
 
-const experiences = [
+type ExperienceProps = {
+    employer: {
+        name: string,
+        logo?: string
+    },
+    location: string,
+    title: string,
+    summary: string[]
+};
+
+const experiences: ExperienceProps[] = [
     {
         employer: {
             name: 'Microsoft',
@@ -45,7 +55,7 @@ const experiences = [
     },
 ];
 
-function Experience({ employer, location, title, summary }) {
+function Experience({ employer, location, title, summary }: ExperienceProps) {
     const useStyles = makeStyles({
         img: {
             objectFit: 'contain',

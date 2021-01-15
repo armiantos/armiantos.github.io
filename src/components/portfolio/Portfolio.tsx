@@ -33,7 +33,7 @@ function App() {
     return (
         <div className="portfolio">
             <header className="header">
-                <Logo className="logo" />
+                <Logo className="logo"/>
                 <p className="catchphrase">
                     I am <em>the</em> software engineer.
                 </p>
