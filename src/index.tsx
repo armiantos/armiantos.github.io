@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core';
-import './index.css';
+import { ThemeProvider } from '@material-ui/core';
 import Portfolio from './components/Portfolio';
-
-let theme = createMuiTheme({});
-theme = responsiveFontSizes(theme);
+import theme from './theme';
+import './index.css';
 
 ReactDOM.render(
     <React.StrictMode>
