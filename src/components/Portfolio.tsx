@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import Experiences from '../experiences/Experiences';
+import Experiences from './Experiences';
 import './Portfolio.css';
 import anime from 'animejs';
 
-import Logo from '../logo/Logo';
+import Logo from './Logo';
 
 function App() {
     function animate() {
