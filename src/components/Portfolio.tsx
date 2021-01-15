@@ -36,6 +36,9 @@ const useStyles = makeStyles((theme) => ({
         height: theme.spacing(32),
         margin: `${theme.spacing(2)}px 0 ${theme.spacing(2)}px 0`
     },
+    list: {
+        padding: `${theme.spacing(4)}px 0`,
+    }
 }));
 
 function Portfolio() {
@@ -69,7 +72,7 @@ function Portfolio() {
                 <Typography variant="h3" gutterBottom>
                     My work experience
                 </Typography>
-                <Grid container spacing={2} direction="row" justify="center" alignItems="center">
+                <Grid container spacing={2} direction="row" justify="center" alignItems="center" className={classes.list}>
                     {experiences.map((experience) => (
                         <Grid item xs={12} key={experience.employer.name}>
                             <Experience
