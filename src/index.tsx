@@ -1,10 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-    createMuiTheme,
-    responsiveFontSizes,
-    ThemeProvider,
-} from '@material-ui/core';
+import { createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core';
 import './index.css';
 import Portfolio from './components/portfolio/Portfolio';
 import * as serviceWorker from './serviceWorker';

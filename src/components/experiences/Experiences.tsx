@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-    Card,
-    CardMedia,
-    CardContent,
-    Grid,
-    Typography,
-} from '@material-ui/core';
+import { Card, CardMedia, CardContent, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import './Experiences.css';
 
@@ -63,13 +57,7 @@ function Experience({ employer, location, title, summary }) {
 
     return (
         <Card>
-            <CardMedia
-                component="img"
-                alt={`${employer.name}-logo`}
-                image={employer.logo}
-                height="200"
-                className={classes.img}
-            ></CardMedia>
+            <CardMedia component="img" alt={`${employer.name}-logo`} image={employer.logo} height="200" className={classes.img}></CardMedia>
             <CardContent>
                 <Typography gutterBottom variant="h5">
                     {employer.name}
@@ -86,13 +74,7 @@ function Experiences() {
     return (
         <div className="experiences">
             <Typography variant="h3">My work experience</Typography>
-            <Grid
-                container
-                spacing={2}
-                direction="row"
-                justify="center"
-                alignItems="center"
-            >
+            <Grid container spacing={2} direction="row" justify="center" alignItems="center">
                 {experiences.map((experience) => (
                     <Grid item xs={8} sm={5} md={3} key={experience.employer.name}>
                         <Experience
