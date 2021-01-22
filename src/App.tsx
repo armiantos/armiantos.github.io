@@ -19,17 +19,17 @@ function App() {
 
             <div className="App">
                 <AppBar position="static">
-                    <Toolbar>
+                    <Toolbar component={'nav'}>
                         <Button color="inherit" component={Link} href="/">
                             About
                         </Button>
-                        <Button color="inherit" href="/work">
+                        <Button color="inherit" component={Link} href="/work">
                             Work
                         </Button>
-                        <Button color="inherit" href="/coding">
+                        <Button color="inherit" component={Link} href="/coding">
                             Coding
                         </Button>
-                        <Button color="inherit" href="/design">
+                        <Button color="inherit" component={Link} href="/design">
                             Design
                         </Button>
                     </Toolbar>
