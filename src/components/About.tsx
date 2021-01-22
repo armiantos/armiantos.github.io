@@ -50,7 +50,7 @@ function About() {
                     Hi!
                 </Typography>
                 
-                <Avatar alt="Me" src="/profile.jpg" className={classes.large} />
+                <Avatar alt="Me" src="/profile.JPG" className={classes.large} />
 
                 <Typography variant="body1">
                     My name is Armi. I am a 4<sup>th</sup> year Software Engineering Student at the University of Alberta.
