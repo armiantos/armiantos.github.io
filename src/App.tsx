@@ -8,6 +8,7 @@ import Link from '@material-ui/core/Link';
 
 import About from './components/About';
 import Work from './components/Work';
+import Coding from './components/Coding';
 import WIP from './components/WIP';
 
 import './App.css';
@@ -42,7 +43,7 @@ function App() {
                         <Work />
                     </Route>
                     <Route path="/coding">
-                        <WIP />
+                        <Coding />
                     </Route>
                     <Route path="/design">
                         <WIP />
