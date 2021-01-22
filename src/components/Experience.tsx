@@ -41,8 +41,8 @@ function Experience({ employer, location, title, summary, duration }: Experience
                     {title}
                 </Typography>
                 <ul>
-                    {summary.map((item) => (
-                        <li>
+                    {summary.map((item, i) => (
+                        <li key={i}>
                             <Typography variant="body1" align="left">
                                 {item}
                             </Typography>
