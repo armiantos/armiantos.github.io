@@ -4,11 +4,11 @@ import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import anime from 'animejs';
-import Logo from './Logo';
-import Experience from './Experience';
-import './Portfolio.css';
+import Logo from './components/Logo';
+import Experience from './components/Experience';
+import './App.css';
 
-import experiences from '../data/experiences';
+import experiences from './data/experiences';
 
 function animate() {
     const tl = anime.timeline({});
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function Portfolio() {
+function App() {
     const classes = useStyles();
 
     useEffect(() => {
@@ -93,4 +93,4 @@ function Portfolio() {
     );
 }
 
-export default Portfolio;
+export default App;
