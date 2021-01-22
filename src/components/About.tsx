@@ -49,10 +49,14 @@ function About() {
                 <Typography variant="h3" gutterBottom>
                     Hi!
                 </Typography>
+                
                 <Avatar alt="Me" src="/profile.jpg" className={classes.large} />
+
                 <Typography variant="body1">
-                    My name is Armi. I am a 4<sup>th</sup> year Software Engineering Student at the University of Alberta. My passion is to
-                    empower others by developing programs that will greatly enhance their productivity.
+                    My name is Armi. I am a 4<sup>th</sup> year Software Engineering Student at the University of Alberta.
+                </Typography>
+                <Typography variant="body1">
+                    My passion is to empower others by developing programs that will greatly enhance their productivity.
                 </Typography>
             </div>
         </div>
