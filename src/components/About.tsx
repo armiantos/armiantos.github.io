@@ -3,9 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import { makeStyles } from '@material-ui/core/styles';
 import anime from 'animejs';
-import Logo from './Logo';
 import './About.css';
-
 
 function animate() {
     const tl = anime.timeline({});
@@ -47,21 +45,14 @@ function About() {
 
     return (
         <div>
-            <header className="header">
-                <Logo className="logo" />
-                <Typography variant="h5" className={`catchphrase ${classes.subtitle}`}>
-                    I am <em>the</em> software engineer.
-                </Typography>
-            </header>
-
             <div className="container about short">
                 <Typography variant="h3" gutterBottom>
-                    About me
+                    Hi!
                 </Typography>
                 <Avatar alt="Me" src="/profile.jpg" className={classes.large} />
                 <Typography variant="body1">
-                    I am a 4<sup>th</sup> year Software Engineering Student at the University of Alberta. My passion is to empower others by
-                    developing programs that will greatly enhance their productivity.
+                    My name is Armi. I am a 4<sup>th</sup> year Software Engineering Student at the University of Alberta. My passion is to
+                    empower others by developing programs that will greatly enhance their productivity.
                 </Typography>
             </div>
         </div>

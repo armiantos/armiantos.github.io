@@ -3,10 +3,12 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import About from './components/About';
 import Work from './components/Work';
 
+import './App.css';
+
 function App() {
     return (
         <Router>
-            <div>
+            <div className="App">
                 <nav>
                     <ul>
                         <li>

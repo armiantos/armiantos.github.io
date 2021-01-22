@@ -1,0 +1,5 @@
+.Work {
+    /* Workaround for negative margins on Grids
+       Source: https://material-ui.com/components/grid/#negative-margin */
+    overflow-x: hidden;
+}

@@ -30,9 +30,3 @@
     width: 60vmin;
     height: auto;
 }
-
-.experiences {
-    /* Workaround for negative margins on Grids
-       Source: https://material-ui.com/components/grid/#negative-margin */
-    overflow-x: hidden;
-}
