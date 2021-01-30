@@ -8,7 +8,7 @@ import Link from '@material-ui/core/Link';
 
 import About from './components/About';
 import Work from './components/Work';
-import Coding from './components/Coding';
+import Projects from './components/Projects';
 import WIP from './components/WIP';
 
 import './App.css';
@@ -27,8 +27,8 @@ function App() {
                         <Button color="inherit" component={Link} href="/work">
                             Work
                         </Button>
-                        <Button color="inherit" component={Link} href="/coding">
-                            Coding
+                        <Button color="inherit" component={Link} href="/projects">
+                            Projects
                         </Button>
                         <Button color="inherit" component={Link} href="/design">
                             Design
@@ -42,8 +42,8 @@ function App() {
                     <Route path="/work">
                         <Work />
                     </Route>
-                    <Route path="/coding">
-                        <Coding />
+                    <Route path="/projects">
+                        <Projects />
                     </Route>
                     <Route path="/design">
                         <WIP />

@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function Coding() {
+function Projects() {
     const classes = useStyles();
 
     return (
@@ -45,4 +45,4 @@ function Coding() {
     );
 }
 
-export default Coding;
+export default Projects;
