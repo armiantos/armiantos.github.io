@@ -12,6 +12,7 @@ import Projects from './components/Projects';
 import WIP from './components/WIP';
 
 import './App.css';
+import Container from '@material-ui/core/Container';
 
 function App() {
     return (
@@ -21,18 +22,20 @@ function App() {
             <div className="App">
                 <AppBar position="static">
                     <Toolbar component={'nav'}>
-                        <Button color="inherit" component={Link} href="/">
-                            About
-                        </Button>
-                        <Button color="inherit" component={Link} href="/work">
-                            Work
-                        </Button>
-                        <Button color="inherit" component={Link} href="/projects">
-                            Projects
-                        </Button>
-                        <Button color="inherit" component={Link} href="/design">
-                            Design
-                        </Button>
+                        <Container>
+                            <Button color="inherit" component={Link} href="/">
+                                About
+                            </Button>
+                            <Button color="inherit" component={Link} href="/work">
+                                Work
+                            </Button>
+                            <Button color="inherit" component={Link} href="/projects">
+                                Projects
+                            </Button>
+                            <Button color="inherit" component={Link} href="/design">
+                                Design
+                            </Button>
+                        </Container>
                     </Toolbar>
                 </AppBar>
 
