@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Experience from './Experience';
 import './Work.css';
 
-import experiences from '../data/experiences';
+import work from '../data/work';
 
 const useStyles = makeStyles((theme) => ({
     title: {
@@ -20,7 +20,7 @@ function Work() {
         <div className="Work">
             <Typography variant="h3" className={classes.title} gutterBottom>My work experience</Typography>
             <Grid container direction="row" justify="center" alignItems="center" >
-                {experiences.map((experience) => (
+                {work.map((experience) => (
                     <Grid item xs={12} key={experience.employer.name}>
                         <Experience
                             employer={experience.employer}
