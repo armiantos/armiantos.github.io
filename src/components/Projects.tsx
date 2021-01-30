@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '50px',
     },
     img: {
-        width: '100%',
+        maxWidth: '100%',
     },
 }));
 
@@ -30,7 +30,7 @@ function Projects() {
             </Typography>
 
             {projects.map((project) => (
-                <Grid container key={project.name} justify="center">
+                <Grid container justify="center" key={project.name}>
                     {project.thumbnail !== '' && (
                         <Grid item xs={10} sm={3}>
                             <img className={classes.img} src={project.thumbnail} alt={`${project.name}-thumbnail`} />
@@ -38,19 +38,19 @@ function Projects() {
                     )}
 
                     <Grid item xs={12} sm={7} md={4}>
-                        <Box display="flex" flexDirection="row" justifyContent={matches ? 'left': 'center'}>
-                            <Typography variant="h4" gutterBottom>
-                                {project.name}
-                            </Typography>
-
-                            <IconButton aria-label="source" component={Link} href={project.source}>
-                                <CodeIcon />
-                            </IconButton>
-                        </Box>
+                        <Typography variant="h4" gutterBottom align={matches ? 'left' : 'center'}>
+                            {project.name}
+                        </Typography>
 
                         <Typography variant="body1" align={matches ? 'left' : 'center'}>
                             {project.summary}
                         </Typography>
+
+                        <Box display="flex">
+                            <IconButton aria-label="source" component={Link} href={project.source}>
+                                <CodeIcon />
+                            </IconButton>
+                        </Box>
                     </Grid>
                 </Grid>
             ))}

@@ -8,10 +8,10 @@ const projects = [
     },
     {
         name: 'Unlibrary',
-        source: 'https://github.com/CMPUT301F20T24/Unlibrary/',
+        source: 'https://github.com/CMPUT301F20T24/Unlibrary/', // TODO: fix thumbnail
         thumbnail: '/img/projects/unlibrary.png',
         summary:
-            'Unlibrary is an Android app used to track book lendings and borrowings. People can search for books that other people have and is available for borrowing and can arrange a physical meet up to retrieve or return the book. We used Firebase as our backend service and Material design for the front end components. We used Android best practices including MVVM architecture, dependency injection using Hilt, set-up both unit and UI tests using Firebase emulator and Espresso respectively.',
+            'Unlibrary is an Android app used to track book lendings and borrowings. This was developed for a course project. With Unlibrary, people can search for books that other people have and is available for borrowing and can arrange a physical meet up to retrieve or return the book. We used Firebase as our backend service and Material design for the front end components. We used Android best practices including MVVM architecture, dependency injection using Hilt, set-up both unit and UI tests using Firebase emulator and Espresso respectively.',
     },
     {
         name: 'PongAI',
