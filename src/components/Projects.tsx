@@ -46,7 +46,7 @@ function Projects() {
                             {project.summary}
                         </Typography>
 
-                        <Box display="flex">
+                        <Box display="flex" justifyContent={matches? 'flex-start': 'center'}>
                             <IconButton aria-label="source" component={Link} href={project.source}>
                                 <CodeIcon />
                             </IconButton>
