@@ -2,6 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
 
 type ExperienceProps = {
     employer: {
@@ -23,7 +24,29 @@ const useStyles = makeStyles({
         padding: '5%',
         margin: 'auto',
     },
+    h5: {
+        marginRight: '.5em',
+    },
 });
+
+function toShortString(date: Date): String {
+    const monthNames = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+    ];
+
+    return `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+}
 
 function Experience({ employer, location, title, summary, duration }: ExperienceProps) {
     const classes = useStyles();
@@ -34,15 +57,26 @@ function Experience({ employer, location, title, summary, duration }: Experience
                 <img className={classes.large} alt={`${employer.name}-logo`} src={employer.logo} />
             </Grid>
             <Grid item sm={7} md={6} lg={5}>
-                <Typography gutterBottom variant="h5" align="left">
-                    {employer.name}
-                </Typography>
-                <Typography variant="subtitle1" color="textSecondary" align="left">
+                <Box display="flex" alignItems="baseline">
+                    <Typography gutterBottom variant="h5" align="left" className={classes.h5}>
+                        {employer.name}
+                    </Typography>
+                    <Typography variant="h6" align="left" color="textSecondary">
+                        {location}
+                    </Typography>
+                </Box>
+
+                <Typography variant="subtitle1" align="left" gutterBottom>
                     {title}
                 </Typography>
+
+                <Typography variant="subtitle1" color="textSecondary" align="left">
+                    {`${toShortString(duration[0])} - ${toShortString(duration[1])}`}
+                </Typography>
+
                 <ul>
-                    {summary.map((item) => (
-                        <li>
+                    {summary.map((item, i) => (
+                        <li key={i}>
                             <Typography variant="body1" align="left">
                                 {item}
                             </Typography>
