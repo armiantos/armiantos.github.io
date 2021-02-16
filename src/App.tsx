@@ -9,7 +9,6 @@ import Link from '@material-ui/core/Link';
 import About from './components/About';
 import Work from './components/Work';
 import Projects from './components/Projects';
-import WIP from './components/WIP';
 
 import './App.css';
 import Container from '@material-ui/core/Container';
