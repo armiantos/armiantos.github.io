@@ -31,6 +31,9 @@ function App() {
                             <Button color="inherit" component={Link} href="/projects">
                                 Projects
                             </Button>
+                            <Button color="inherit" component={Link} href="/ArmiantoSumitro_Resume.pdf">
+                                Resume
+                            </Button>
                             {/* <Button color="inherit" component={Link} href="/design">
                                 Design
                             </Button> */}
