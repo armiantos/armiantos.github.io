@@ -1,9 +1,9 @@
 .Spirals {
     position: absolute;
-    width: 200vmax;
+    width: 100vmax;
 
-    top: -80vmax;
-    right: -120vmax;
+    top: -30vmax;
+    right: -40vmax;
 }
 
 .background {
