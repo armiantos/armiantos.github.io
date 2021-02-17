@@ -3,6 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
+import Spirals from './Spirals';
 import './About.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -25,6 +26,8 @@ function About() {
                 <Typography variant="h3" gutterBottom>
                     Hi!
                 </Typography>
+
+                <Spirals />
 
                 <Avatar alt="Me" src="/profile.JPG" className={classes.large} />
 

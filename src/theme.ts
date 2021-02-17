@@ -1,6 +1,9 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core';
 
 const theme = createMuiTheme({
+    palette: {
+        type: 'dark',
+    },
     typography: {
         fontFamily: ['Open Sans', '-apple-system', 'sans-serif'].join(','),
     },
@@ -12,8 +15,8 @@ const theme = createMuiTheme({
         },
         MuiButton: {
             colorInherit: {
-                color: 'inherit !important' // Fix for clashing text colors when deployed
-            }
+                color: 'inherit !important', // Fix for clashing text colors when deployed
+            },
         },
     },
 });
