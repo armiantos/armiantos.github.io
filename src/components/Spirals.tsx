@@ -10,6 +10,7 @@ function Spiral({ index }: { index: number }) {
     const initialRotation = Math.random() * 360;
 
     useEffect(() => {
+        // Need individual durations to make infinite loop
         anime({
             targets: `.spiral${index}`,
             rotateZ: '1turn',
@@ -21,7 +22,7 @@ function Spiral({ index }: { index: number }) {
 
     return (
         <path
-            className={`spiral${index}`}
+            className={`spiral spiral${index}`}
             d="M621.3 0C639.36 0 654.085 14.6496 653.183 32.6867C649.444 107.404 632.908 181.01 604.217 250.275C571.351 329.622 523.177 401.718 462.448 462.448C401.718 523.177 329.622 571.351 250.275 604.217C181.01 632.908 107.404 649.444 32.6867 653.183C14.6495 654.085 -2.79473e-05 639.36 -2.71579e-05 621.3V621.3C-2.63685e-05 603.24 14.6519 588.695 32.6838 587.692C98.8077 584.015 163.918 569.199 225.247 543.795C296.66 514.216 361.546 470.86 416.203 416.203C470.86 361.546 514.216 296.66 543.795 225.247C569.199 163.918 584.015 98.8077 587.692 32.6838C588.695 14.6519 603.24 0 621.3 0V0Z"
             fill={`url(#paint${Math.floor(Math.random() * colors.length)}_linear)`}
             style={{ mixBlendMode: 'screen', transform: `scale(${scale}) rotate(${initialRotation}deg)` }}
@@ -30,7 +31,16 @@ function Spiral({ index }: { index: number }) {
 }
 
 function Spirals() {
-    const spirals = 20;
+    const spirals = 15;
+
+    useEffect(() => {
+        anime({
+            targets: '.spiral',
+            opacity: [0, 1],
+            duration: 3000,
+            delay: anime.stagger(200),
+        });
+    }, []);
 
     return (
         <div className="background">
