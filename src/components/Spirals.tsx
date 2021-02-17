@@ -37,11 +37,12 @@ function Spirals() {
             <div className="Spirals">
                 <svg width="100%" height="100%" viewBox="-654 -654 1308 1308" fill="none" xmlns="http://www.w3.org/2000/svg">
                     {[...Array(spirals).keys()].map((_, i) => (
-                        <Spiral index={i} />
+                        <Spiral index={i} key={`spiral-${i}`} />
                     ))}
                     <defs>
                         {colors.map((hex, i) => (
                             <linearGradient
+                                key={`paints${i}_linear`}
                                 id={`paint${i}_linear`}
                                 x1="-1.17961e-05"
                                 y1="621.5"
