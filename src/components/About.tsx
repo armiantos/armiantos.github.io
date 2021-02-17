@@ -22,12 +22,11 @@ function About() {
 
     return (
         <div className="container">
+            <Spirals />
             <Container maxWidth="md">
                 <Typography variant="h3" gutterBottom>
                     Hi!
                 </Typography>
-
-                <Spirals />
 
                 <Avatar alt="Me" src="/profile.JPG" className={classes.large} />
 
