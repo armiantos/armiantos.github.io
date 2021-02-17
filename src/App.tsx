@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -15,20 +15,20 @@ import Container from '@material-ui/core/Container';
 
 function App() {
     return (
-        <Router basename={process.env.BASE_URL}>
+        <Router>
             <CssBaseline />
 
             <div className="App">
                 <AppBar position="static">
                     <Toolbar component={'nav'}>
                         <Container>
-                            <Button color="inherit" component={Link} href="/">
+                            <Button color="inherit" component={Link} href="/#">
                                 About
                             </Button>
-                            <Button color="inherit" component={Link} href="/work">
+                            <Button color="inherit" component={Link} href="/#work">
                                 Work
                             </Button>
-                            <Button color="inherit" component={Link} href="/projects">
+                            <Button color="inherit" component={Link} href="/#projects">
                                 Projects
                             </Button>
                             <Button color="inherit" component={Link} href="/ArmiantoSumitro_Resume.pdf">

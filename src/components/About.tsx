@@ -20,7 +20,7 @@ function About() {
     useEffect(() => {
         anime({
             targets: '.about',
-            translateY: ['-20px', 0],
+            translateY: ['-50px', 0],
             opacity: [0, 1],
             easing: 'easeOutCubic',
             duration: 1000,
