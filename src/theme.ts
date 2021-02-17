@@ -3,6 +3,9 @@ import { createMuiTheme, responsiveFontSizes } from '@material-ui/core';
 const theme = createMuiTheme({
     palette: {
         type: 'dark',
+        background: {
+            default: '#0E1633'
+        }
     },
     typography: {
         fontFamily: ['Open Sans', '-apple-system', 'sans-serif'].join(','),
