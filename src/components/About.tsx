@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 import Spirals from './Spirals';
 import { makeStyles } from '@material-ui/core/styles';
+import anime from 'animejs';
 
 import './About.css';
 
@@ -15,10 +16,21 @@ const useStyles = makeStyles((theme) => ({
 
 function About() {
     const classes = useStyles();
+
+    useEffect(() => {
+        anime({
+            targets: '.about',
+            translateY: ['-50px', 0],
+            opacity: [0, 1],
+            easing: 'easeOutCubic',
+            duration: 1000,
+        });
+    }, []);
+
     return (
         <div className="container">
             <Spirals />
-            <Container maxWidth="md">
+            <Container maxWidth="md" className="about">
                 <Paper className={classes.root} elevation={0}>
                     <Typography variant="h3" gutterBottom align="left">
                         Hi!
