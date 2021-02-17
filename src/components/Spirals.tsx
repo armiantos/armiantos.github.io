@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import anime from 'animejs';
 
+import './Spirals.css';
+
 function Spiral({ index }: { index: number }) {
     const scale = 0.8 * Math.random() + 0.2;
     const initialRotation = Math.random() * 360;
@@ -29,8 +31,10 @@ function Spirals() {
     const spirals = 20;
 
     return (
-        <div className="Spirals">
-            <svg width="30%" height="30%" viewBox="-654 -654 1308 1308" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className="background">
+
+<div className="Spirals">
+            <svg width="100%" height="100%" viewBox="-654 -654 1308 1308" fill="none" xmlns="http://www.w3.org/2000/svg">
                 {[...Array(spirals).keys()].map((_, i) => (
                     <Spiral index={i} />
                 ))}
@@ -41,6 +45,7 @@ function Spirals() {
                     </linearGradient>
                 </defs>
             </svg>
+        </div>
         </div>
     );
 }

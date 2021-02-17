@@ -1,0 +1,16 @@
+.Spirals {
+    position: absolute;
+    height: 200%;
+    width: 200%;
+    top: -80%;
+    right: -100%;
+}
+
+.background {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
