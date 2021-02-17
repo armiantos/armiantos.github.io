@@ -10,6 +10,7 @@
         "@testing-library/user-event": "^7.1.2",
         "animejs": "^3.2.1",
         "bootstrap": "^4.5.3",
+        "gatsby": "^2.32.3",
         "gh-pages": "^2.2.0",
         "jquery": "^3.5.1",
         "react": "^16.14.0",
@@ -25,7 +26,8 @@
         "eject": "react-scripts eject",
         "predeploy": "npm run build",
         "deploy": "gh-pages -b master -d build",
-        "format": "prettier --config .prettierrc.yaml --ignore-path .prettierignore --write \"src/**/*\" "
+        "format": "prettier --config .prettierrc.yaml --ignore-path .prettierignore --write \"src/**/*\" ",
+        "gatsby": "gatsby"
     },
     "eslintConfig": {
         "extends": "react-app"
