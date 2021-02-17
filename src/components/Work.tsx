@@ -22,7 +22,7 @@ function Work() {
     useEffect(() => {
         anime({
             targets: '.experience',
-            translateY: ['-50px', 0],
+            translateY: ['-20px', 0],
             opacity: [0, 1],
             easing: 'easeOutCubic',
             duration: 1000,
