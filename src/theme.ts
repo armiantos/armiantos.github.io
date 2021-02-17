@@ -1,14 +1,15 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core';
+import { fade } from '@material-ui/core/styles/colorManipulator';
 
 const theme = createMuiTheme({
     palette: {
         type: 'dark',
         background: {
-            default: '#0E1633'
+            default: '#0E1633',
         },
         primary: {
-            main:'#080e24'
-        }
+            main: '#080e24',
+        },
     },
     typography: {
         fontFamily: ['Open Sans', '-apple-system', 'sans-serif'].join(','),
@@ -24,16 +25,16 @@ const theme = createMuiTheme({
                 color: 'inherit !important', // Fix for clashing text colors when deployed
             },
             root: {
-                borderRadius: '20px'
-            }
+                borderRadius: '20px',
+            },
         },
         MuiPaper: {
             root: {
-                backgroundColor: '#080e24',
+                backgroundColor: fade('#080e24', 0.7),
             },
             rounded: {
-                borderRadius: '20px'
-            }
+                borderRadius: '20px',
+            },
         },
     },
 });
