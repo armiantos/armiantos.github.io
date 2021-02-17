@@ -23,6 +23,17 @@ const theme = createMuiTheme({
             colorInherit: {
                 color: 'inherit !important', // Fix for clashing text colors when deployed
             },
+            root: {
+                borderRadius: '20px'
+            }
+        },
+        MuiPaper: {
+            root: {
+                backgroundColor: '#080e24',
+            },
+            rounded: {
+                borderRadius: '20px'
+            }
         },
     },
 });
