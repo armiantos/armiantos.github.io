@@ -42,7 +42,7 @@ function Projects() {
                     {projects.map((project) => (
                         <Grid item>
                             <Paper className={classes.root}>
-                                <Grid container justify="center" key={project.name}>
+                                <Grid container key={project.name} justify="center" alignItems="center">
                                     {project.thumbnail !== '' && (
                                         <Grid item xs={12} sm={4}>
                                             <img className={classes.img} src={project.thumbnail} alt={`${project.name}-thumbnail`} />
