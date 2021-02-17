@@ -12,12 +12,11 @@ function About() {
                 <Typography variant="h3" gutterBottom align="left">
                     Hi!
                 </Typography>
-
                 <Typography variant="body1" align="left">
                     My name is Armi. I am a 4<sup>th</sup> year Software Engineering Student at the University of Alberta.
                 </Typography>
                 <Typography variant="body1" align="left">
-                    My passion is to empower others by developing programs that will enhance their productivity and pleasing to look at.
+                    My passion is to empower others by developing programs that will enhance their productivity and is visually appealing.
                 </Typography>
             </Container>
         </div>
