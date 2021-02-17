@@ -12,7 +12,7 @@ const theme = createMuiTheme({
         },
     },
     typography: {
-        fontFamily: ['Open Sans', '-apple-system', 'sans-serif'].join(','),
+        fontFamily: ['Lato', '-apple-system', 'sans-serif'].join(','),
     },
     overrides: {
         MuiGrid: {

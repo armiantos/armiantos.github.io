@@ -58,7 +58,7 @@ function Experience({ employer, location, title, summary, duration }: Experience
             </Grid>
             <Grid item sm={7}>
                 <Box display="flex" alignItems="baseline">
-                    <Typography gutterBottom variant="h5" align="left" className={classes.h5}>
+                    <Typography variant="h5" align="left" className={classes.h5}>
                         {employer.name}
                     </Typography>
                     <Typography variant="h6" align="left" color="textSecondary">
@@ -66,7 +66,7 @@ function Experience({ employer, location, title, summary, duration }: Experience
                     </Typography>
                 </Box>
 
-                <Typography variant="subtitle1" align="left" gutterBottom>
+                <Typography variant="subtitle1" align="left">
                     {title}
                 </Typography>
 
