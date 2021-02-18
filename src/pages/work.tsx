@@ -41,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
         marginRight: '.5em',
     },
 }));
-const classes = useStyles();
 
 function toShortString(date: Date): String {
     const monthNames = [

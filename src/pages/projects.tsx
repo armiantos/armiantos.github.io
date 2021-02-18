@@ -36,9 +36,9 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.primary,
     },
 }));
-const classes = useStyles();
 
 function Project({ project }: { project: ProjectProps }) {
+    const classes = useStyles();
     const matches = useMediaQuery((theme: Theme) => theme.breakpoints.up('sm'));
 
     return (
@@ -69,6 +69,8 @@ function Project({ project }: { project: ProjectProps }) {
 }
 
 function Projects() {
+    const classes = useStyles();
+    
     useEffect(() => {
         anime({
             targets: '.project',
