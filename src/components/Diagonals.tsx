@@ -19,9 +19,11 @@ function Diagonal({ index }: { index: number }) {
             translateY: [initialPosition, initialPosition + 800],
             loop: true,
             opacity: [
-                { value: 1, duration: lifetime - transitionTime },
+                { value: 0, duration: 0 },
+                { value: 1, duration: transitionTime },
                 { value: 0, duration: transitionTime, delay: lifetime - transitionTime },
             ],
+            delay: index * 200,
             duration: lifetime,
             easing: 'linear',
         });
@@ -42,15 +44,6 @@ function Diagonal({ index }: { index: number }) {
 
 function Diagonals() {
     const diagonals = 15;
-
-    useEffect(() => {
-        anime({
-            targets: '.diagonal',
-            opacity: [0, 1],
-            duration: 3000,
-            delay: anime.stagger(200),
-        });
-    }, []);
 
     return (
         <div className="background">
