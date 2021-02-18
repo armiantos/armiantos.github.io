@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import anime from 'animejs';
 
+import './Diagonals.css';
+
 const colors = ['#FF2525', '#FFB800', '#FF007A', '#0E8BFF', '#00FFA3', '#8DEF5F', '#7000FF'];
 
 function Diagonal({ index }: { index: number }) {
@@ -9,12 +11,18 @@ function Diagonal({ index }: { index: number }) {
     useEffect(() => {
         // Need individual durations to make infinite loop
         const initialPosition = Math.random() * 733;
+        const lifetime = 30000 * (1 + Math.random());
+        const transitionTime = 2000;
+
         anime({
             targets: `.diagonal${index}`,
-            translateX: [initialPosition, initialPosition - 400],
-            translateY: [initialPosition, initialPosition + 400],
+            translateY: [initialPosition, initialPosition + 800],
             loop: true,
-            duration: 30000 * (1 + Math.random()),
+            opacity: [
+                { value: 1, duration: lifetime - transitionTime },
+                { value: 0, duration: transitionTime, delay: lifetime - transitionTime },
+            ],
+            duration: lifetime,
             easing: 'linear',
         });
     }, [index]);
@@ -35,19 +43,19 @@ function Diagonal({ index }: { index: number }) {
 function Diagonals() {
     const diagonals = 15;
 
-    // useEffect(() => {
-    //     anime({
-    //         targets: '.diagonal',
-    //         opacity: [0, 1],
-    //         duration: 3000,
-    //         delay: anime.stagger(200),
-    //     });
-    // }, []);
+    useEffect(() => {
+        anime({
+            targets: '.diagonal',
+            opacity: [0, 1],
+            duration: 3000,
+            delay: anime.stagger(200),
+        });
+    }, []);
 
     return (
         <div className="background">
             <div className="Diagonals">
-                <svg width="100%" height="100%" viewBox="-733 733 1466 1466" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="100%" height="100%" viewBox="-733 0 1466 1466" fill="none" xmlns="http://www.w3.org/2000/svg">
                     {[...Array(diagonals).keys()].map((_, i) => (
                         <Diagonal index={i} key={`diagonal-${i}`} />
                     ))}
