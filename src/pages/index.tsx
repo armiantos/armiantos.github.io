@@ -34,7 +34,7 @@ function Avatar({ imgSource }: { imgSource: string }) {
             display: 'flex',
             alignItems: 'center',
             height: '100%',
-            width: '100%'
+            width: '100%',
         },
         img: {
             borderRadius: '50%',
