@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Project({ project }: { project: ProjectProps }) {
     const classes = useStyles();
-    const matches = useMediaQuery((theme: Theme) => theme.breakpoints.up('sm'));
+    const isLarge = useMediaQuery((theme: Theme) => theme.breakpoints.up('sm'));
 
     return (
         <Grid container key={project.name} justify="center" alignItems="center">
@@ -50,15 +50,15 @@ function Project({ project }: { project: ProjectProps }) {
             )}
 
             <Grid item xs={12} sm={7}>
-                <Typography variant="h4" gutterBottom align={matches ? 'left' : 'center'}>
+                <Typography variant="h4" gutterBottom align={isLarge ? 'left' : 'center'}>
                     {project.name}
                 </Typography>
 
-                <Typography variant="body1" align={matches ? 'left' : 'center'}>
+                <Typography variant="body1" align={isLarge ? 'left' : 'center'}>
                     {project.summary}
                 </Typography>
 
-                <Box display="flex" justifyContent={matches ? 'flex-start' : 'center'}>
+                <Box display="flex">
                     <IconButton aria-label="source" component={Link} href={project.source} className={classes.textPrimary} disableRipple>
                         <CodeIcon />
                     </IconButton>
@@ -85,7 +85,7 @@ function Projects() {
     return (
         <div className="Projects">
             <NavHeader />
-            <Typography variant="h3" className={classes.title} gutterBottom>
+            <Typography variant="h3" className={classes.title} gutterBottom align="center">
                 My projects
             </Typography>
 

@@ -71,28 +71,24 @@ const Work = ({ employer, location, title, summary, duration }: ExperienceProps)
             </Grid>
             <Grid item sm={7}>
                 <Box display="flex" alignItems="baseline">
-                    <Typography variant="h5" align="left" className={classes.h5}>
+                    <Typography variant="h5" className={classes.h5}>
                         {employer.name}
                     </Typography>
-                    <Typography variant="h6" align="left" color="textSecondary">
+                    <Typography variant="h6" color="textSecondary">
                         {location}
                     </Typography>
                 </Box>
 
-                <Typography variant="subtitle1" align="left">
-                    {title}
-                </Typography>
+                <Typography variant="subtitle1">{title}</Typography>
 
-                <Typography variant="subtitle1" color="textSecondary" align="left">
+                <Typography variant="subtitle1" color="textSecondary">
                     {`${toShortString(duration[0])} - ${toShortString(duration[1])}`}
                 </Typography>
 
                 <ul>
                     {summary.map((item, i) => (
                         <li key={i}>
-                            <Typography variant="body1" align="left">
-                                {item}
-                            </Typography>
+                            <Typography variant="body1">{item}</Typography>
                         </li>
                     ))}
                 </ul>
@@ -119,7 +115,7 @@ const WorkPage = () => {
         <div className="Work">
             <NavHeader />
 
-            <Typography variant="h3" className={classes.title} gutterBottom>
+            <Typography variant="h3" className={classes.title} gutterBottom align="center">
                 My work experience
             </Typography>
             <Container maxWidth="md">
