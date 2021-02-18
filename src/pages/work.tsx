@@ -6,9 +6,10 @@ import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import anime from 'animejs';
+import NavHeader from '../components/NavHeader';
+import Diagonals from '../components/Diagonals';
 
 import work from '../data/work';
-import NavHeader from '../components/NavHeader';
 
 import { renderLinks } from '../helper';
 
@@ -118,6 +119,8 @@ const WorkPage = () => {
     return (
         <div className="Work">
             <NavHeader />
+
+            <Diagonals />
 
             <Typography variant="h3" className={classes.title} gutterBottom align="center">
                 My work experience
