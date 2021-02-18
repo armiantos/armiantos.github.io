@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
@@ -6,7 +7,7 @@ import Spirals from '../components/Spirals';
 import { makeStyles } from '@material-ui/core/styles';
 import anime from 'animejs';
 
-import '../styles/About.css';
+import '../styles/index.css';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -29,6 +30,11 @@ const IndexPage = () => {
 
     return (
         <div className="container">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Armi's Portfolio</title>
+            </Helmet>
+
             <Spirals />
             <Container maxWidth="md" className="about">
                 <Paper className={classes.root} elevation={0}>
