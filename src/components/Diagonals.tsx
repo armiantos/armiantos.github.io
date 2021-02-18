@@ -36,6 +36,7 @@ function Diagonal({ index }: { index: number }) {
             width="60"
             height="976"
             rx="30"
+            opacity="0"
             fill={`url(#paint${Math.floor(Math.random() * colors.length)}_linear)`}
             style={{ mixBlendMode: 'screen', transform: `scale(${scale}) rotate(45deg)` }}
         />
