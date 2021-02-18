@@ -13,6 +13,7 @@ import Container from '@material-ui/core/Container';
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: theme.spacing(1),
+        opacity: 0, // Prevent flash before animation starts
     },
     title: {
         marginTop: '50px',
