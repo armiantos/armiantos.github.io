@@ -1,14 +1,14 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
-import Container from '@material-ui/core/Container';
+import Box from '@material-ui/core/Box';
 import Toolbar from '@material-ui/core/Toolbar';
 import Link from '@material-ui/core/Link';
 
 const NavHeader = () => (
     <AppBar position="static">
         <Toolbar component={'nav'}>
-            <Container>
+            <Box display="flex" justifyContent="center" margin="auto">
                 <Button color="inherit" component={Link} href="/" disableRipple>
                     About
                 </Button>
@@ -24,7 +24,7 @@ const NavHeader = () => (
                 {/* <Button color="inherit" component={Link} href="/design">
             Design
         </Button> */}
-            </Container>
+            </Box>
         </Toolbar>
     </AppBar>
 );
