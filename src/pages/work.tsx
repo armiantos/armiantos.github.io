@@ -10,7 +10,7 @@ import anime from 'animejs';
 import work from '../data/work';
 import NavHeader from '../components/NavHeader';
 
-import { renderLinks } from '../helper.tsx';
+import { renderLinks } from '../helper';
 
 type ExperienceProps = {
     employer: {
