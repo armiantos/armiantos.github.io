@@ -12,6 +12,14 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import anime from 'animejs';
 
 import projects from '../data/projects';
+import NavHeader from '../components/NavHeader';
+
+type ProjectProps = {
+    name: string;
+    thumbnail: string;
+    summary: string;
+    source: string;
+};
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -29,9 +37,39 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+function Project({ project }: { project: ProjectProps }) {
+    const classes = useStyles();
+    const isLarge = useMediaQuery((theme: Theme) => theme.breakpoints.up('sm'));
+
+    return (
+        <Grid container key={project.name} justify="center" alignItems="center">
+            {project.thumbnail !== '' && (
+                <Grid item xs={12} sm={4}>
+                    <img className={classes.img} src={project.thumbnail} alt={`${project.name}-thumbnail`} />
+                </Grid>
+            )}
+
+            <Grid item xs={12} sm={7}>
+                <Typography variant="h4" gutterBottom align={isLarge ? 'left' : 'center'}>
+                    {project.name}
+                </Typography>
+
+                <Typography variant="body1" align={isLarge ? 'left' : 'center'}>
+                    {project.summary}
+                </Typography>
+
+                <Box display="flex">
+                    <IconButton aria-label="source" component={Link} href={project.source} className={classes.textPrimary} disableRipple>
+                        <CodeIcon />
+                    </IconButton>
+                </Box>
+            </Grid>
+        </Grid>
+    );
+}
+
 function Projects() {
     const classes = useStyles();
-    const matches = useMediaQuery((theme: Theme) => theme.breakpoints.up('sm'));
 
     useEffect(() => {
         anime({
@@ -46,7 +84,8 @@ function Projects() {
 
     return (
         <div className="Projects">
-            <Typography variant="h3" className={classes.title} gutterBottom>
+            <NavHeader />
+            <Typography variant="h3" className={classes.title} gutterBottom align="center">
                 My projects
             </Typography>
 
@@ -55,34 +94,7 @@ function Projects() {
                     {projects.map((project) => (
                         <Grid item>
                             <Paper className={classes.root + ' project'}>
-                                <Grid container key={project.name} justify="center" alignItems="center">
-                                    {project.thumbnail !== '' && (
-                                        <Grid item xs={12} sm={4}>
-                                            <img className={classes.img} src={project.thumbnail} alt={`${project.name}-thumbnail`} />
-                                        </Grid>
-                                    )}
-
-                                    <Grid item xs={12} sm={7}>
-                                        <Typography variant="h4" gutterBottom align={matches ? 'left' : 'center'}>
-                                            {project.name}
-                                        </Typography>
-
-                                        <Typography variant="body1" align={matches ? 'left' : 'center'}>
-                                            {project.summary}
-                                        </Typography>
-
-                                        <Box display="flex" justifyContent={matches ? 'flex-start' : 'center'}>
-                                            <IconButton
-                                                aria-label="source"
-                                                component={Link}
-                                                href={project.source}
-                                                className={classes.textPrimary}
-                                            >
-                                                <CodeIcon />
-                                            </IconButton>
-                                        </Box>
-                                    </Grid>
-                                </Grid>
+                                <Project project={project} />
                             </Paper>
                         </Grid>
                     ))}
