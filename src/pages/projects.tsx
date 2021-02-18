@@ -16,6 +16,7 @@ import projects from '../data/projects';
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: theme.spacing(1),
+        opacity: 0, // Prevent flash before animation starts
     },
     title: {
         marginTop: '50px',
