@@ -1,13 +1,4 @@
-.About {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    padding: 100px 0;
-    margin: 0 auto;
-}
-
 .Banner {
     opacity: 0; /* Prevent flash before animation starts */
+    padding-top: 100px;
 }
