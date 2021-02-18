@@ -28,6 +28,7 @@ div {
     }
 }
 
+/* TODO: Fix clipping */
 .background {
     overflow: hidden;
     height: 100%;
