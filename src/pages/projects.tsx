@@ -32,9 +32,6 @@ const useStyles = makeStyles((theme) => ({
     img: {
         maxWidth: '100%',
     },
-    textPrimary: {
-        color: theme.palette.text.primary,
-    },
 }));
 
 function Project({ project }: { project: ProjectProps }) {
@@ -59,7 +56,7 @@ function Project({ project }: { project: ProjectProps }) {
                 </Typography>
 
                 <Box display="flex">
-                    <IconButton aria-label="source" component={Link} href={project.source} className={classes.textPrimary} disableRipple>
+                    <IconButton aria-label="source" component={Link} href={project.source} disableRipple>
                         <CodeIcon />
                     </IconButton>
                 </Box>
