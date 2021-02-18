@@ -1,7 +1,7 @@
 import Link from '@material-ui/core/Link';
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-export function renderLinks(markdown: string) {
+export function renderLinks(markdown: string): ReactNode {
     const linkCatcher = /\[(.+?)\]\((.+?)\)/g;
     const matches = markdown.matchAll(linkCatcher);
 
@@ -10,7 +10,7 @@ export function renderLinks(markdown: string) {
     }
 
     let i = 0;
-    let contents: any[] = [];
+    let contents: ReactNode[] = [];
 
     for (const match of matches) {
         contents.push(markdown.substr(i, markdown.indexOf(match[0]) - i));
