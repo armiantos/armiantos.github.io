@@ -3,20 +3,23 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
-import Experience from './Experience';
+import Experience from '../components/Experience';
 import anime from 'animejs';
-import './Work.css';
+// import './Work.css'; TODO: Fix css imports
 
 import work from '../data/work';
 import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles((theme) => ({
+    root: {
+        padding: theme.spacing(1),
+    },
     title: {
         marginTop: '50px',
     },
 }));
 
-function Work() {
+const WorkPage = () => {
     const classes = useStyles();
 
     useEffect(() => {
@@ -39,7 +42,7 @@ function Work() {
                 <Grid container direction="row" justify="center" alignItems="center">
                     {work.map((experience) => (
                         <Grid item xs={12} key={experience.employer.name}>
-                            <Paper elevation={0} className="experience">
+                            <Paper elevation={0} className={classes.root + ' experience'}>
                                 <Experience
                                     employer={experience.employer}
                                     location={experience.location}
@@ -54,6 +57,6 @@ function Work() {
             </Container>
         </div>
     );
-}
+};
 
-export default Work;
+export default WorkPage;

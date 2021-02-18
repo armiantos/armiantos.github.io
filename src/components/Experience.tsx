@@ -15,7 +15,7 @@ type ExperienceProps = {
     summary: string[];
 };
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     large: {
         objectFit: 'contain',
         boxSizing: 'border-box',
@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     h5: {
         marginRight: '.5em',
     },
-});
+}));
 
 function toShortString(date: Date): String {
     const monthNames = [
