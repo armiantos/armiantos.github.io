@@ -72,7 +72,7 @@ const Work = ({ employer, location, title, summary, duration }: ExperienceProps)
                 <img className={classes.large} alt={`${employer.name}-logo`} src={employer.logo} />
             </Grid>
             <Grid item sm={7}>
-                <Box display="flex" alignItems="baseline">
+                <Box display="flex">
                     <Typography variant="h5" className={classes.h5}>
                         {employer.name}
                     </Typography>
@@ -90,7 +90,9 @@ const Work = ({ employer, location, title, summary, duration }: ExperienceProps)
                 <ul>
                     {summary.map((point, i) => (
                         <li key={i}>
-                            <Typography variant="body1">{renderLinks(point)}</Typography>
+                            <Typography variant="body1" align="left">
+                                {renderLinks(point)}
+                            </Typography>
                         </li>
                     ))}
                 </ul>
