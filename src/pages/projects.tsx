@@ -59,7 +59,7 @@ function Project({ project }: { project: ProjectProps }) {
                 </Typography>
 
                 <Box display="flex" justifyContent={matches ? 'flex-start' : 'center'}>
-                    <IconButton aria-label="source" component={Link} href={project.source} className={classes.textPrimary}>
+                    <IconButton aria-label="source" component={Link} href={project.source} className={classes.textPrimary} disableRipple>
                         <CodeIcon />
                     </IconButton>
                 </Box>
@@ -70,7 +70,7 @@ function Project({ project }: { project: ProjectProps }) {
 
 function Projects() {
     const classes = useStyles();
-    
+
     useEffect(() => {
         anime({
             targets: '.project',

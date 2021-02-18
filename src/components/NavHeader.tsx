@@ -9,16 +9,16 @@ const NavHeader = () => (
     <AppBar position="static">
         <Toolbar component={'nav'}>
             <Container>
-                <Button color="inherit" component={Link} href="/">
+                <Button color="inherit" component={Link} href="/" disableRipple>
                     About
                 </Button>
-                <Button color="inherit" component={Link} href="/work">
+                <Button color="inherit" component={Link} href="/work" disableRipple>
                     Work
                 </Button>
-                <Button color="inherit" component={Link} href="/projects">
+                <Button color="inherit" component={Link} href="/projects" disableRipple>
                     Projects
                 </Button>
-                <Button color="inherit" component={Link} href="/ArmiantoSumitro_Resume.pdf">
+                <Button color="inherit" component={Link} href="/ArmiantoSumitro_Resume.pdf" disableRipple>
                     Resume
                 </Button>
                 {/* <Button color="inherit" component={Link} href="/design">

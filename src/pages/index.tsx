@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
         padding: theme.spacing(3),
     },
+    textPrimary: {
+        color: theme.palette.text.primary,
+    },
 }));
 
 const IndexPage = () => {
@@ -57,10 +60,22 @@ const IndexPage = () => {
                     </Typography>
 
                     <Box display="flex" justifyContent="flex-start">
-                        <IconButton aria-label="source" component={Link} href={'https://github.com/armiantos'}>
+                        <IconButton
+                            aria-label="source"
+                            component={Link}
+                            href={'https://github.com/armiantos'}
+                            disableRipple
+                            className={classes.textPrimary}
+                        >
                             <GitHubIcon />
                         </IconButton>
-                        <IconButton aria-label="source" component={Link} href={'https://www.linkedin.com/in/armiantos/'}>
+                        <IconButton
+                            aria-label="source"
+                            component={Link}
+                            href={'https://www.linkedin.com/in/armiantos/'}
+                            disableRipple
+                            className={classes.textPrimary}
+                        >
                             <LinkedInIcon />
                         </IconButton>
                     </Box>
