@@ -9,6 +9,7 @@ import anime from 'animejs';
 
 import work from '../data/work';
 import NavHeader from '../components/NavHeader';
+import Link from '@material-ui/core/Link';
 
 type ExperienceProps = {
     employer: {
@@ -61,6 +62,29 @@ function toShortString(date: Date): String {
     return `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
 }
 
+function renderLinks(markdown: string) {
+    const linkCatcher = /\[(.+?)\]\((.+?)\)/g;
+    const matches = markdown.matchAll(linkCatcher);
+
+    if (matches === null) {
+        return <Typography variant="body1">{markdown}</Typography>;
+    }
+
+    let i = 0;
+    let contents: any[] = [];
+
+    for (const match of matches) {
+        console.log(match);
+        contents.push(markdown.substr(i, markdown.indexOf(match[0]) - i));
+        contents.push(<Link href={match[2]} color="secondary">{match[1]}</Link>);
+        i += markdown.indexOf(match[0]) + match[0].length;
+    }
+
+    contents.push(markdown.substr(i, markdown.length));
+
+    return contents;
+}
+
 const Work = ({ employer, location, title, summary, duration }: ExperienceProps) => {
     const classes = useStyles();
 
@@ -86,9 +110,9 @@ const Work = ({ employer, location, title, summary, duration }: ExperienceProps)
                 </Typography>
 
                 <ul>
-                    {summary.map((item, i) => (
+                    {summary.map((point, i) => (
                         <li key={i}>
-                            <Typography variant="body1">{item}</Typography>
+                            <Typography variant="body1">{renderLinks(point)}</Typography>
                         </li>
                     ))}
                 </ul>

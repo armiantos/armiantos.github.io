@@ -36,6 +36,14 @@ const theme = createMuiTheme({
                 borderRadius: '20px',
             },
         },
+        MuiTypography: {
+            colorPrimary: {
+                color: '#fff',
+            },
+            colorSecondary: {
+                color: '#eaf075'
+            }
+        },
     },
 });
 
