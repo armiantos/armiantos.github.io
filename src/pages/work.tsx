@@ -11,6 +11,9 @@ import work from '../data/work';
 import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles((theme) => ({
+    root: {
+        padding: theme.spacing(1),
+    },
     title: {
         marginTop: '50px',
     },
@@ -39,7 +42,7 @@ const WorkPage = () => {
                 <Grid container direction="row" justify="center" alignItems="center">
                     {work.map((experience) => (
                         <Grid item xs={12} key={experience.employer.name}>
-                            <Paper elevation={0} className="experience">
+                            <Paper elevation={0} className={classes.root + ' experience'}>
                                 <Experience
                                     employer={experience.employer}
                                     location={experience.location}

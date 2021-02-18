@@ -14,6 +14,9 @@ import anime from 'animejs';
 import projects from '../data/projects';
 
 const useStyles = makeStyles((theme) => ({
+    root: {
+        padding: theme.spacing(1),
+    },
     title: {
         marginTop: '50px',
     },
@@ -22,9 +25,6 @@ const useStyles = makeStyles((theme) => ({
     },
     textPrimary: {
         color: theme.palette.text.primary,
-    },
-    root: {
-        padding: theme.spacing(1),
     },
 }));
 
