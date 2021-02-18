@@ -10,7 +10,7 @@ function Diagonal({ index }: { index: number }) {
 
     useEffect(() => {
         // Need individual durations to make infinite loop
-        const initialPosition = Math.random() * 733;
+        const initialPosition = Math.random() * 733 * 2 - 733;
         const lifetime = 30000 * (1 + Math.random());
         const transitionTime = 2000;
 
