@@ -13,6 +13,13 @@ import anime from 'animejs';
 
 import projects from '../data/projects';
 
+type ProjectProps = {
+    name: string;
+    thumbnail: string;
+    summary: string;
+    source: string;
+};
+
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: theme.spacing(1),
@@ -28,11 +35,39 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.primary,
     },
 }));
+const classes = useStyles();
 
-function Projects() {
-    const classes = useStyles();
+function Project({ project }: { project: ProjectProps }) {
     const matches = useMediaQuery((theme: Theme) => theme.breakpoints.up('sm'));
 
+    return (
+        <Grid container key={project.name} justify="center" alignItems="center">
+            {project.thumbnail !== '' && (
+                <Grid item xs={12} sm={4}>
+                    <img className={classes.img} src={project.thumbnail} alt={`${project.name}-thumbnail`} />
+                </Grid>
+            )}
+
+            <Grid item xs={12} sm={7}>
+                <Typography variant="h4" gutterBottom align={matches ? 'left' : 'center'}>
+                    {project.name}
+                </Typography>
+
+                <Typography variant="body1" align={matches ? 'left' : 'center'}>
+                    {project.summary}
+                </Typography>
+
+                <Box display="flex" justifyContent={matches ? 'flex-start' : 'center'}>
+                    <IconButton aria-label="source" component={Link} href={project.source} className={classes.textPrimary}>
+                        <CodeIcon />
+                    </IconButton>
+                </Box>
+            </Grid>
+        </Grid>
+    );
+}
+
+function Projects() {
     useEffect(() => {
         anime({
             targets: '.project',
@@ -55,34 +90,7 @@ function Projects() {
                     {projects.map((project) => (
                         <Grid item>
                             <Paper className={classes.root + ' project'}>
-                                <Grid container key={project.name} justify="center" alignItems="center">
-                                    {project.thumbnail !== '' && (
-                                        <Grid item xs={12} sm={4}>
-                                            <img className={classes.img} src={project.thumbnail} alt={`${project.name}-thumbnail`} />
-                                        </Grid>
-                                    )}
-
-                                    <Grid item xs={12} sm={7}>
-                                        <Typography variant="h4" gutterBottom align={matches ? 'left' : 'center'}>
-                                            {project.name}
-                                        </Typography>
-
-                                        <Typography variant="body1" align={matches ? 'left' : 'center'}>
-                                            {project.summary}
-                                        </Typography>
-
-                                        <Box display="flex" justifyContent={matches ? 'flex-start' : 'center'}>
-                                            <IconButton
-                                                aria-label="source"
-                                                component={Link}
-                                                href={project.source}
-                                                className={classes.textPrimary}
-                                            >
-                                                <CodeIcon />
-                                            </IconButton>
-                                        </Box>
-                                    </Grid>
-                                </Grid>
+                                <Project project={project} />
                             </Paper>
                         </Grid>
                     ))}
