@@ -57,8 +57,8 @@ jobs:
             - name: Get build
               uses: actions/download-artifact@v2
               with:
-                  name: build
-                  path: build
+                  name: public
+                  path: public
 
             # https://github.com/marketplace/actions/deploy-to-github-pages
             - name: Deploy to Github Pages
@@ -66,5 +66,5 @@ jobs:
               with:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   BRANCH: main # The branch the action should deploy to.
-                  FOLDER: build # The folder the action should deploy.
+                  FOLDER: public # The folder the action should deploy.
                   CLEAN: true # Automatically remove deleted files from the deploy branch
