@@ -8,6 +8,7 @@ import Box from '@material-ui/core/Box';
 import anime from 'animejs';
 
 import work from '../data/work';
+import NavHeader from '../components/NavHeader';
 
 type ExperienceProps = {
     employer: {
@@ -117,6 +118,8 @@ const WorkPage = () => {
 
     return (
         <div className="Work">
+            <NavHeader />
+
             <Typography variant="h3" className={classes.title} gutterBottom>
                 My work experience
             </Typography>

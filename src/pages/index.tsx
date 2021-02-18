@@ -10,6 +10,7 @@ import Link from '@material-ui/core/Link';
 import IconButton from '@material-ui/core/IconButton';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import NavHeader from '../components/NavHeader';
 import anime from 'animejs';
 
 import '../styles/index.css';
@@ -25,7 +26,7 @@ const IndexPage = () => {
 
     useEffect(() => {
         anime({
-            targets: '.about',
+            targets: '.Banner',
             translateY: ['-20px', 0],
             opacity: [0, 1],
             easing: 'easeOutCubic',
@@ -34,14 +35,15 @@ const IndexPage = () => {
     }, []);
 
     return (
-        <div className="container">
+        <div className="About">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Armi's Portfolio</title>
             </Helmet>
+            <NavHeader />
 
             <Spirals />
-            <Container maxWidth="md" className="about">
+            <Container maxWidth="md" className="Banner">
                 <Paper className={classes.root} elevation={0}>
                     <Typography variant="h3" gutterBottom align="left">
                         Hi!

@@ -1,4 +1,4 @@
-.container {
+.About {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,6 +8,6 @@
     margin: 0 auto;
 }
 
-.about {
+.Banner {
     opacity: 0; /* Prevent flash before animation starts */
 }

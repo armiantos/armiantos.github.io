@@ -12,6 +12,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import anime from 'animejs';
 
 import projects from '../data/projects';
+import NavHeader from '../components/NavHeader';
 
 type ProjectProps = {
     name: string;
@@ -81,6 +82,7 @@ function Projects() {
 
     return (
         <div className="Projects">
+            <NavHeader />
             <Typography variant="h3" className={classes.title} gutterBottom>
                 My projects
             </Typography>
