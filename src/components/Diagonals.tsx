@@ -70,8 +70,8 @@ function Diagonals() {
                                 y2="-16.565"
                                 gradientUnits="userSpaceOnUse"
                             >
-                                <stop stop-color={hex} />
-                                <stop offset="1" stop-color={hex} stop-opacity="0" />
+                                <stop stopColor={hex} />
+                                <stop offset="1" stopColor={hex} stopOpacity="0" />
                             </linearGradient>
                         ))}
                     </defs>
