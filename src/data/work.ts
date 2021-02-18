@@ -8,9 +8,10 @@ const work = [
         location: 'Vancouver',
         title: 'Software Engineer Intern',
         summary: [
-            'Defined and implemented a scalable code and data architecture for my project',
-            'Delivered efficient, well-structured, testable, and documented technical deliverables on time',
-            'Designed important components through specs and kept the bug backlog under control',
+            'Used C# and DirectX capture API to implement animated GIF recorder for PowerToys',
+            'Worked on a confidential project with Azure Functions as part of Microsoft Global Hackathon involving Kubernetes',
+            'Implemented an auto collage image generator ([Microsoft Gryd](https://www.behance.net/gallery/104025097/Microsoft-Gryd-A-Microsoft-Design-Internship-Project?fbclid=IwAR1JLvHi4EYL8nt9ddIUFgnDWmOhqGPMxFTSPZzGiMEsL3irz6EPxeSMXAI)) from user’s OneDrive using Flask and React',
+            'Defined and implemented a scalable code and data architecture for a synchronous multiplayer game using Angular, Phaser, Express and Socket.io',
         ],
     },
     {

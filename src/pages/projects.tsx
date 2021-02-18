@@ -7,12 +7,13 @@ import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import CodeIcon from '@material-ui/icons/Code';
+import NavHeader from '../components/NavHeader';
+import Diagonals from '../components/Diagonals';
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import anime from 'animejs';
 
 import projects from '../data/projects';
-import NavHeader from '../components/NavHeader';
 
 type ProjectProps = {
     name: string;
@@ -31,9 +32,6 @@ const useStyles = makeStyles((theme) => ({
     },
     img: {
         maxWidth: '100%',
-    },
-    textPrimary: {
-        color: theme.palette.text.primary,
     },
 }));
 
@@ -59,7 +57,7 @@ function Project({ project }: { project: ProjectProps }) {
                 </Typography>
 
                 <Box display="flex">
-                    <IconButton aria-label="source" component={Link} href={project.source} className={classes.textPrimary} disableRipple>
+                    <IconButton aria-label="source" component={Link} href={project.source} disableRipple>
                         <CodeIcon />
                     </IconButton>
                 </Box>
@@ -85,6 +83,8 @@ function Projects() {
     return (
         <div className="Projects">
             <NavHeader />
+            <Diagonals />
+
             <Typography variant="h3" className={classes.title} gutterBottom align="center">
                 My projects
             </Typography>

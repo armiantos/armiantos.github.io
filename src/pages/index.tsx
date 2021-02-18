@@ -21,9 +21,6 @@ const useStyles = makeStyles((theme) => ({
     root: {
         padding: theme.spacing(3),
     },
-    textPrimary: {
-        color: theme.palette.text.primary,
-    },
 }));
 
 function Avatar({ imgSource }: { imgSource: string }) {
@@ -96,13 +93,7 @@ const IndexPage = () => {
                             </Typography>
 
                             <Box display="flex">
-                                <IconButton
-                                    aria-label="source"
-                                    component={Link}
-                                    href={'https://github.com/armiantos'}
-                                    disableRipple
-                                    className={classes.textPrimary}
-                                >
+                                <IconButton aria-label="source" component={Link} href={'https://github.com/armiantos'} disableRipple>
                                     <GitHubIcon />
                                 </IconButton>
                                 <IconButton
@@ -110,7 +101,6 @@ const IndexPage = () => {
                                     component={Link}
                                     href={'https://www.linkedin.com/in/armiantos/'}
                                     disableRipple
-                                    className={classes.textPrimary}
                                 >
                                     <LinkedInIcon />
                                 </IconButton>

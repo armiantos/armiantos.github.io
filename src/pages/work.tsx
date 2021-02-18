@@ -6,9 +6,12 @@ import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import anime from 'animejs';
+import NavHeader from '../components/NavHeader';
+import Diagonals from '../components/Diagonals';
 
 import work from '../data/work';
-import NavHeader from '../components/NavHeader';
+
+import { renderLinks } from '../helper';
 
 type ExperienceProps = {
     employer: {
@@ -70,7 +73,7 @@ const Work = ({ employer, location, title, summary, duration }: ExperienceProps)
                 <img className={classes.large} alt={`${employer.name}-logo`} src={employer.logo} />
             </Grid>
             <Grid item sm={7}>
-                <Box display="flex" alignItems="baseline">
+                <Box display="flex">
                     <Typography variant="h5" className={classes.h5}>
                         {employer.name}
                     </Typography>
@@ -86,9 +89,11 @@ const Work = ({ employer, location, title, summary, duration }: ExperienceProps)
                 </Typography>
 
                 <ul>
-                    {summary.map((item, i) => (
+                    {summary.map((point, i) => (
                         <li key={i}>
-                            <Typography variant="body1">{item}</Typography>
+                            <Typography variant="body1" align="left">
+                                {renderLinks(point)}
+                            </Typography>
                         </li>
                     ))}
                 </ul>
@@ -114,6 +119,8 @@ const WorkPage = () => {
     return (
         <div className="Work">
             <NavHeader />
+
+            <Diagonals />
 
             <Typography variant="h3" className={classes.title} gutterBottom align="center">
                 My work experience
