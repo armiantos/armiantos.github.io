@@ -50,7 +50,7 @@ function Diagonals() {
     const diagonals = 15;
 
     return (
-        <div className="background">
+        <div className="Background">
             <div className="Diagonals">
                 <svg width="100%" height="100%" viewBox="-733 0 1466 1466" fill="none" xmlns="http://www.w3.org/2000/svg">
                     {[...Array(diagonals).keys()].map((_, i) => (

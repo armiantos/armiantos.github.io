@@ -82,7 +82,7 @@ function Projects() {
     }, []);
 
     return (
-        <div className="Projects full-page">
+        <div className="Projects FullPage">
             <NavHeader />
             <Diagonals />
 

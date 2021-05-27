@@ -64,7 +64,7 @@ const IndexPage = () => {
     }, []);
 
     return (
-        <div className="About">
+        <div className="About FullPage">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Armi's Portfolio</title>

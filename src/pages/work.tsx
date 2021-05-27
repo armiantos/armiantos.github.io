@@ -118,7 +118,7 @@ const WorkPage = () => {
     }, []);
 
     return (
-        <div className="Work full-page">
+        <div className="Work FullPage">
             <NavHeader />
 
             <Diagonals />
