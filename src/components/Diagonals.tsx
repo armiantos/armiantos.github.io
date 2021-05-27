@@ -7,16 +7,19 @@ const colors = ['#FF2525', '#FFB800', '#FF007A', '#0E8BFF', '#00FFA3', '#8DEF5F'
 
 function Diagonal({ index }: { index: number }) {
     const scale = 0.8 * Math.random() + 0.2;
+    const svgHeight = 1466;
+    const lineLength = 976;
+    const travelDistance = svgHeight - lineLength;
 
     useEffect(() => {
         // Need individual durations to make infinite loop
-        const initialPosition = Math.random() * 733 * 2 - 733;
+        const initialPosition = -lineLength / 2 - svgHeight / 2 + (Math.random() * lineLength) / 2;
         const lifetime = 30000 * (1 + Math.random());
         const transitionTime = 2000;
 
         anime({
             targets: `.diagonal${index}`,
-            translateY: [initialPosition, initialPosition + 800],
+            translateY: [initialPosition, initialPosition + travelDistance],
             loop: true,
             opacity: [
                 { value: 0, duration: 0 },

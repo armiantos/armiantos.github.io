@@ -6,6 +6,7 @@ import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import anime from 'animejs';
+
 import NavHeader from '../components/NavHeader';
 import Diagonals from '../components/Diagonals';
 
@@ -117,7 +118,7 @@ const WorkPage = () => {
     }, []);
 
     return (
-        <div className="Work">
+        <div className="Work full-page">
             <NavHeader />
 
             <Diagonals />

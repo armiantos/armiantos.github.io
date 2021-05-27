@@ -7,11 +7,12 @@ import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import CodeIcon from '@material-ui/icons/Code';
-import NavHeader from '../components/NavHeader';
-import Diagonals from '../components/Diagonals';
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import anime from 'animejs';
+
+import NavHeader from '../components/NavHeader';
+import Diagonals from '../components/Diagonals';
 
 import projects from '../data/projects';
 
@@ -81,7 +82,7 @@ function Projects() {
     }, []);
 
     return (
-        <div className="Projects">
+        <div className="Projects full-page">
             <NavHeader />
             <Diagonals />
 
