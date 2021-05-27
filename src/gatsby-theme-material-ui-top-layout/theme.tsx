@@ -41,8 +41,8 @@ const theme = createMuiTheme({
                 color: '#fff',
             },
             colorSecondary: {
-                color: '#eaf075'
-            }
+                color: '#eaf075',
+            },
         },
     },
 });

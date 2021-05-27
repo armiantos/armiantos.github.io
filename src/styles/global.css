@@ -28,19 +28,19 @@ div {
     }
 }
 
-/* TODO: Fix clipping */
-.background {
+/* Parent of background needs to have position: relative */
+.Background {
     overflow: hidden;
     height: 100%;
     width: 100%;
     position: absolute;
-    float: left;
-    top: 0;
-    left: 0;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    top: 0; /* Go under headers to not overflow*/
 
     z-index: -1; /* Make background behind everything */
+}
+
+.FullPage {
+    position: relative;
+    min-height: 100vh;
 }
